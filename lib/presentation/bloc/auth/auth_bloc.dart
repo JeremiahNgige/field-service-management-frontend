@@ -41,8 +41,7 @@ class AuthUnauthenticated extends AuthState {
   const AuthUnauthenticated();
 }
 
-/// Signals that the session expired involuntarily (refresh token rejected).
-/// UI should redirect to login with an "expired" banner.
+
 class AuthSessionExpired extends AuthState {
   const AuthSessionExpired();
 }
@@ -117,7 +116,6 @@ class AuthSetBiometricEnabled extends AuthEvent {
   final bool enabled;
 }
 
-/// Internal event — fired when [SessionExpiredNotifier] broadcasts.
 class _AuthSessionExpiredReceived extends AuthEvent {
   const _AuthSessionExpiredReceived();
 }
@@ -159,7 +157,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  /// Fetches the current FCM token and pushes it to the backend silently.
   Future<void> _registerFcmToken() async {
     final token = await _fcmService.getToken();
     if (token != null) {
@@ -309,10 +306,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final token = await getAccessToken();
     final refreshToken = await getRefreshToken();
 
-    // ─────────────────────────────────────────────────────────────────
-    // SECURITY PATCH: Local Expiration Check
-    // Prevent offline cache access if the token is completely expired
-    // ─────────────────────────────────────────────────────────────────
+
     if (isJwtExpired(refreshToken)) {
       await clearTokens(); // Hard wipe local tokens
       emit(

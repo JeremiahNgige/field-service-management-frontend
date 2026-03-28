@@ -304,9 +304,6 @@ class ApiService implements IApiService {
   }
 
   // ── Direct MinIO upload ───────────────────────────────────────────────────
-
-  /// Takes a [presignedUrl] from [generateUploadUrls] and PUTs [fileBytes]
-  /// straight to MinIO. Returns the object [key] on success.
   Future<Either<DioException, String>> uploadToMinio({
     required String presignedUrl,
     required String key,
@@ -321,7 +318,6 @@ class ApiService implements IApiService {
     );
   }
 
-  /// Convenience: resolves the public URL for a stored object key.
   String resolveMinioUrl(String key) => AppConstants.minioObjectUrl(key);
 
   @override
@@ -334,7 +330,6 @@ class ApiService implements IApiService {
     }
   }
 
-  /// Extracts the `cursor` query parameter from a full paginated URL returned by Django.
   String? _extractCursor(String? urlString) {
     if (urlString == null || urlString.isEmpty) return null;
     try {

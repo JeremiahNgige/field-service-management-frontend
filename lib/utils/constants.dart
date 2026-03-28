@@ -9,7 +9,7 @@ class AppConstants {
   // static const String baseUrl =
   //     'http://localhost:8000/api'; // iOS simulator → host Docker
   static const String baseUrl =
-      'http://192.168.0.7:8000/api'; // Physical device → host LAN IP (update IP)
+      'http://192.168.0.109:8000/api'; // Physical device → host LAN IP (update IP)
 
   // ── MinIO / S3 ────────────────────────────────────────────────────────────
   //
@@ -21,7 +21,7 @@ class AppConstants {
   // static const String minioEndpoint =
   //     'http://localhost:9000'; // iOS simulator → host Docker
   static const String minioEndpoint =
-      'http://192.168.0.7:9000'; // Physical device → host LAN IP (update IP)
+      'http://192.168.0.109:9000'; // Physical device → host LAN IP (update IP)
 
   /// S3 bucket name (AWS_STORAGE_BUCKET_NAME in backend .env).
   static const String minioBucket = 'fsm-bucket';

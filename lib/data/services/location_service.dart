@@ -32,12 +32,17 @@ class LocationService {
     }
 
     _permanentlyDenied = false;
-    return await Geolocator.getCurrentPosition(
-      locationSettings: const LocationSettings(
-        accuracy: LocationAccuracy.high,
-        timeLimit: Duration(seconds: 6),
-      ),
-    );
+    try {
+      return await Geolocator.getCurrentPosition(
+        locationSettings: const LocationSettings(
+          accuracy: LocationAccuracy.high,
+          timeLimit: Duration(seconds: 30),
+        ),
+      );
+    } catch (e) {
+      // Fallback to last known position on timeout or error
+      return await Geolocator.getLastKnownPosition();
+    }
   }
 
   /// Returns the straight-line distance in **meters** between two coordinates.

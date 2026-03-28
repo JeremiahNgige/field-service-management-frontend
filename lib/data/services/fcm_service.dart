@@ -46,6 +46,7 @@ class FcmService {
       sound: true,
     );
 
+
     // Create the high-importance channel for Android foreground notifications.
     await _localNotifications
         .resolvePlatformSpecificImplementation<
