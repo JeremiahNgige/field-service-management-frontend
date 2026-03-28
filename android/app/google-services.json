@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882177503209",
+    "project_id": "fsm-field-technicians-app",
+    "storage_bucket": "fsm-field-technicians-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882177503209:android:577e95f9f1fd15f58c2578",
+        "android_client_info": {
+          "package_name": "com.fsm.fsm_frontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTjvjIsubFr_g-20tu8RgeoNYaovZGjd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

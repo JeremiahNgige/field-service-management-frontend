@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>FSM Field Service</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>fsm_frontend</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+
+	<!-- Biometric Authentication (local_auth) -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>FSM uses Face ID to securely unlock your session without re-entering your password.</string>
+
+	<!-- Camera & Photo Library (camerawesome, flutter_image_compress) -->
+	<key>NSCameraUsageDescription</key>
+	<string>FSM needs camera access to capture job site photos and technician signatures.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FSM needs photo library access to select and upload job site images.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>FSM needs permission to save photos to your library.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>FSM needs microphone access to record audio with video (if applicable).</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FSM requires access to your location to precisely route and track job sites on the native map.</string>
+
+	<!-- Location -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FSM uses your location to record job site GPS coordinates.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>FSM may use your location in the background for field service tracking.</string>
+
+	<!-- Google Maps API Key -->
+	<key>GoogleMapsApiKey</key>
+	<string>AIzaSyAFE6uAxBve7ttuXg7CjjN_FOfB8V13a10</string>
+
+	<!-- Notifications (flutter_local_notifications) -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+
+	<!-- Network (allow HTTP to local dev server) -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
